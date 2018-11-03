@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TribeEvent from './TribeEvent';
+import _ from 'lodash';
 
 class EventCardContainer extends Component {
   render() {
@@ -11,7 +12,7 @@ class EventCardContainer extends Component {
         title={event.name.text}
         id={event.id}
         pic={event.url == null ? "#" : event.logo}
-        status={event.status}
+        status={_.capitalize(event.status)}
       />
     });
 
