@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
-import TribeEvent from './TribeEvent';
-import _ from 'lodash';
+import EventCard from './EventCard/EventCard';
 
 class EventCardContainer extends Component {
   render() {
     const allEventsObject = this.props.events;
-
-    // parse eventsObject and create a list of tribeEvents
-    let tribeEvent = allEventsObject.map(event => {
-      return <TribeEvent
-        title={event.name.text}
-        id={event.id}
-        pic={event.url == null ? "#" : event.logo}
-        status={_.capitalize(event.status)}
-      />
+    let tribeEvents = allEventsObject.map(event => {
+      return <EventCard eventData={event}/>
     });
 
-    return <div> {tribeEvent} </div>
+    return <div> {tribeEvents} </div>
   }
 }
 

@@ -7,7 +7,7 @@ import pic from './download.png';
 const DEFAULT_SEARCH_QUERY = 'HACK_BELGIUM';
 const EVENT_BRITE_SECURITY_TOKEN = 'GUOC2RZKKGQHHFMHXLON';
 
-class EventsContainer extends React.Component {
+class MainContainer extends React.Component {
   state = {
     events: [],
     activePage: 1,
@@ -48,7 +48,7 @@ class EventsContainer extends React.Component {
         {/*Navigation Container*/}
         <nav className="navbar navbar-light bg-light">
           <img src={pic} style={styleImg}></img>
-            <h1 style={styleObj}>tribes</h1>
+            <h1 style={styleObj}>Tribes</h1>
             <SearchBar handleFilter={this.filterResults}/>
         </nav>
 
@@ -61,4 +61,4 @@ class EventsContainer extends React.Component {
   }
 }
 
-export default EventsContainer;
+export default MainContainer;
