@@ -7,14 +7,6 @@ export default class SearchBar extends React.Component {
       searchString: '',
     };
   }
-
-<<<<<<< HEAD
-  handleChange = (event) => {
-    this.setState({searchString: event.target.value});
-  }
-
-  handleSubmit = (event) => {
-=======
   handleSearchInputKeyPress = (event) => {
     this.setState({
       searchString: event.target.value
@@ -22,7 +14,6 @@ export default class SearchBar extends React.Component {
   }
 
   handleSearchButtonClicked = (event) => {
->>>>>>> 7c3b8efd764506b52947e93358cde19e49b255d8
     event.preventDefault();
     this.props.handleFilter(this.state.searchString);
   }

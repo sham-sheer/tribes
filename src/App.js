@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MainContainer from './Containers/MainContainer';
+import { MainContainer } from './Containers/MainContainer';
+import EventDetailsContainer from './Containers/EventDetailsContainer';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 class App extends Component {
   render() {
-    return <div className="App"><MainContainer /></div>
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path={"/"} component={MainContainer} />
+          <Route exact path={"/:eventId"} component={EventDetailsContainer} />
+        </div>
+       </BrowserRouter>
+    )
   }
 }
 

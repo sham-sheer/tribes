@@ -2,12 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import EventCardContainer from '../Components/EventCardContainer.js';
 import SearchBar from '../Components/SearchBar.js';
-import pic from './download.png';
+import pic from '../assets/download.png';
 
 const DEFAULT_SEARCH_QUERY = 'HACK_BELGIUM';
-const EVENT_BRITE_SECURITY_TOKEN = 'GUOC2RZKKGQHHFMHXLON';
+export const EVENT_BRITE_SECURITY_TOKEN = 'GUOC2RZKKGQHHFMHXLON';
 
-class MainContainer extends React.Component {
+export class MainContainer extends React.Component {
   state = {
     events: [],
     activePage: 1,
@@ -47,7 +47,7 @@ class MainContainer extends React.Component {
 
         {/*Navigation Container*/}
         <nav className="navbar navbar-light bg-light">
-          <img src={pic} style={styleImg}></img>
+          <img src={pic} style={styleImg} alt=""></img>
             <h1 style={styleObj}>Tribes</h1>
             <SearchBar handleFilter={this.filterResults}/>
         </nav>
@@ -60,5 +60,3 @@ class MainContainer extends React.Component {
     );
   }
 }
-
-export default MainContainer;
