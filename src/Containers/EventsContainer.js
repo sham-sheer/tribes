@@ -10,7 +10,7 @@ class EventsContainer extends React.Component {
   state = {
     events: [],
     activePage: 1,
-    searchQuery: 'HACK_BELGIUM'
+    searchQuery: ''
   }
 
   componentDidMount() {

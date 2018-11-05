@@ -7,15 +7,13 @@ export default class SearchBar extends React.Component {
     this.state = {
       searchString: '',
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({searchString: event.target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.props.handleFilter(this.state.searchString);
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TribeEvent from './TribeEvent';
 
-
 class List extends Component {
   render() {
     const results = this.props.data;
