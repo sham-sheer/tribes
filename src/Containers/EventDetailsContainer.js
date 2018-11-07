@@ -80,7 +80,7 @@ class EventDetailsContainer extends React.Component {
 
             {/* Event Description(Text) Container*/}
             <div className="event-details card shadow rounded">
-              <div className="event-details-header text-white">{eventHeader}</div>
+              <div className="event-details-header ">{eventHeader}</div>
               <div className="event-details-body card-body text-left">{eventDescription}</div>
             </div>
 

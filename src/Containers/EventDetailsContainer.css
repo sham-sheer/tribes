@@ -12,6 +12,18 @@
   margin-top: 40px;
 }
 
+.event-details-header {
+  font-size: 25px;
+  color: white;
+  font-family: 'Noto Sans';
+  font-weight: bold;
+  background-color: #1D0C3B;
+}
+
+.event-details-body {
+  font-family: 'Noto Sans';
+}
+
 .event-container {
   padding-top: 25px;
   padding-left: 25px;
@@ -27,8 +39,13 @@
 }
 
 .event-name {
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.event-date-time,
+.event-time-zone {
   color: white;
 }
 
@@ -37,15 +54,12 @@
   float: right;
   margin-top: -135px;
   padding-right: 30px;
+  margin-bottom: 30px;
 }
 
 .event-details {
   background-color: #24A2B6;
   margin-top: 40px;
-}
-
-.event-details-header {
-  background-color: #1D0C3B;
 }
 
 .event-title {

@@ -1,4 +1,7 @@
 .event-org-header {
-  color: white;
   background-color: #1D0C3B;
+  font-size: 25px;
+  color: white;
+  font-style: 'Noto Sans';
+  font-weight: bold;
 }

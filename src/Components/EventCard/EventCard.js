@@ -35,7 +35,7 @@ const EventCard = ({ eventData }) => {
           <NavLink className="link-to-event-details" to={`/${eventId}`} >
               <div className="eventname">{eventName}</div>
           </NavLink>
-          <div className="event-date-time">{moment(startDate).format('ddd, MMM DD, hh:mma')}</div>
+          <div className="event-card-date-time">{moment(startDate).format('ddd, MMM DD, hh:mma')}</div>
           <div className="event-location">135 West San Carlos Street, San Jose, CA 95113</div>
         </div>
       </div>
