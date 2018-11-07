@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EventCard from './EventCard/EventCard';
+import EventCard from '../Components/EventCard/EventCard';
+import PropTypes from 'prop-types';
 
 class EventCardContainer extends Component {
   render() {
@@ -11,5 +12,9 @@ class EventCardContainer extends Component {
     return <div> {tribeEvents} </div>
   }
 }
+
+EventCardContainer.propTypes = {
+  events: PropTypes.array
+};
 
 export default EventCardContainer;

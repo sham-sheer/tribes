@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 
@@ -43,3 +43,7 @@ const EventCard = ({ eventData }) => {
 }
 
 export default EventCard;
+
+EventCard.propTypes = {
+  eventData: PropTypes.array
+}

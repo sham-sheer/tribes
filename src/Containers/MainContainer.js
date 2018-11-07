@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import EventCardContainer from '../Components/EventCardContainer.js';
-import SearchBar from '../Components/SearchBar.js';
+import EventCardContainer from './EventCardContainer.js';
+import EventSearchBar from '../Components/EventSearchBar.js';
 import pic from '../assets/download.png';
 
 const DEFAULT_SEARCH_QUERY = 'HACK_BELGIUM';
@@ -49,7 +49,7 @@ export class MainContainer extends React.Component {
         <nav className="navbar navbar-light bg-light">
           <img src={pic} style={styleImg} alt=""></img>
             <h1 style={styleObj}>Tribes</h1>
-            <SearchBar handleFilter={this.filterResults}/>
+            <EventSearchBar handleFilter={this.filterResults}/>
         </nav>
 
         {/*Event Cards Container*/}

@@ -1,10 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+
 
 import { EVENT_BRITE_SECURITY_TOKEN } from './MainContainer';
 
 import './EventDetailsContainer.css';
+
+import EventOrgCard from '../Components/EventOrgCard';
 
 
 class EventDetailsContainer extends React.Component {
@@ -14,7 +18,8 @@ class EventDetailsContainer extends React.Component {
     eventTimeZone: '',
     eventStartDate: '',
     eventEndDate: '',
-    eventImageUrl: ''
+    eventImageUrl: '',
+    eventOrgId: ''
   }
   componentDidMount() {
     const eventId = this.props.match.params.eventId;
@@ -30,7 +35,8 @@ class EventDetailsContainer extends React.Component {
         eventTimeZone: response.data.start.timezone,
         eventStartDate: response.data.start.local,
         eventEndDate: response.data.end.local,
-        eventImageUrl: response.data.logo.url
+        eventImageUrl: response.data.logo.url,
+        eventOrgId: response.data.organizer_id
       })
     })
     .catch(error => {
@@ -45,6 +51,7 @@ class EventDetailsContainer extends React.Component {
     const eventStartDate = this.state.eventStartDate;
     const eventEndDate = this.state.eventEndDate;
     const eventImageUrl = this.state.eventImageUrl;
+    const eventOrgId = this.state.eventOrgId;
 
     return(
       <div className="event-container">
@@ -58,8 +65,22 @@ class EventDetailsContainer extends React.Component {
             </p>
             <p className="lead event-time-zone">{eventTimeZone}</p>
           </div>
+
+
+
+        </div>
+
+        {/* Event Side Cotainer */}
+
+        <div className ="event-right-side-container">
+            {/* Event Logo */}
             <div className="event-image-container shadow p-3 mb-5 bg-white rounded">
               <img src={eventImageUrl} className="event-image" alt=""></img>
+            </div>
+
+            {/* Event Venue */}
+            <div className="event-venue-container shadow p-3 mb-5 bg-white rounded">
+              <EventOrgCard orgId={eventOrgId} />
             </div>
         </div>
 
@@ -75,3 +96,13 @@ class EventDetailsContainer extends React.Component {
 }
 
 export default EventDetailsContainer;
+
+EventDetailsContainer.propTypes = {
+  eventDescription: PropTypes.string,
+  eventName: PropTypes.string,
+  eventTimeZone: PropTypes.string,
+  eventStartDate: PropTypes.string,
+  eventEndDate: PropTypes.string,
+  eventImageUrl: PropTypes.string,
+  eventOrgId: PropTypes.string
+};
