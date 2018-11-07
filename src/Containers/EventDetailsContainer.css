@@ -1,13 +1,15 @@
-.event-description {
-  width: 65%;
-}
-
-.event-image-container {
-}
-
 .event-image {
   width: 100%;
   height: 100%;
+  border-radius: 1%;
+}
+
+.event-image-container {
+  width: auto;
+}
+
+.event-venue-container {
+  margin-top: 40px;
 }
 
 .event-container {
@@ -16,22 +18,36 @@
   padding-right: 25px;
 }
 
-.event-details-header {
-}
-
 .event-name-container {
-  font-family: 'Noto Sans';
   text-align: left;
+  color: #4A4A4A;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 30px;
 }
 
 .event-name {
   font-size: 30px;
   font-weight: 400;
-  color: #4A4A4A;
+  color: white;
 }
 
 .event-right-side-container {
-  width: 30%;
+  width: 40%;
   float: right;
   margin-top: -135px;
+  padding-right: 30px;
+}
+
+.event-details {
+  background-color: #24A2B6;
+  margin-top: 40px;
+}
+
+.event-details-header {
+  background-color: #1D0C3B;
+}
+
+.event-title {
+  background-color: #1D0C3B;
 }

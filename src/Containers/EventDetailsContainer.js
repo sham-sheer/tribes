@@ -57,7 +57,7 @@ class EventDetailsContainer extends React.Component {
       <div className="event-container">
 
         {/* Event Title Container */ }
-        <div className="event-title jumbotron bg-light">
+        <div className="event-title rounded shadow">
           <div className="event-name-container">
             <p className="event-name">{eventName}</p>
             <p className="event-date-time">
@@ -70,25 +70,28 @@ class EventDetailsContainer extends React.Component {
 
         </div>
 
-        {/* Event Side Cotainer */}
+        {/* Event Right Side Cotainer */}
 
         <div className ="event-right-side-container">
             {/* Event Logo */}
-            <div className="event-image-container shadow p-3 mb-5 bg-white rounded">
+            <div className="event-image-container shadow rounded">
               <img src={eventImageUrl} className="event-image" alt=""></img>
             </div>
 
+            {/* Event Description(Text) Container*/}
+            <div className="event-details card shadow rounded">
+              <div className="event-details-header text-white">{eventHeader}</div>
+              <div className="event-details-body card-body text-left">{eventDescription}</div>
+            </div>
+
             {/* Event Venue */}
-            <div className="event-venue-container shadow p-3 mb-5 bg-white rounded">
+            <div className="event-venue-container shadow rounded">
               <EventOrgCard orgId={eventOrgId} />
             </div>
         </div>
 
-        {/* Event Description(Text) Container*/}
-        <div className="event-description card shadow p-3 mb-5 bg-white rounded">
-          <div className="event-details-header card-header bg-info text-white">{eventHeader}</div>
-          <div className="event-details-body card-body text-left">{eventDescription}</div>
-        </div>
+
+
 
         </div>
     );

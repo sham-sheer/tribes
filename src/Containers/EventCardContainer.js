@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EventCard from '../Components/EventCard/EventCard';
 import PropTypes from 'prop-types';
 
+
 class EventCardContainer extends Component {
   render() {
     const allEventsObject = this.props.events;
@@ -9,7 +10,7 @@ class EventCardContainer extends Component {
       return <EventCard eventData={event}/>
     });
 
-    return <div> {tribeEvents} </div>
+    return <div className="event-card-container">{tribeEvents} </div>
   }
 }
 

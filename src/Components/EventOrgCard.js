@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import './EventOrgCard.css'
+
 import { EVENT_BRITE_SECURITY_TOKEN } from '../Containers/MainContainer';
 
 export default class EventOrgCard extends React.Component {
@@ -31,8 +33,8 @@ export default class EventOrgCard extends React.Component {
 
   render() {
     return(
-      <div className="event-org-data-container card">
-        <div className="event-org-header card-header">Organiser</div>
+      <div>
+        <div className="event-org-header">Organiser</div>
         <div className="event-org-body card-body">local chapter OWASP team</div>
       </div>
     );

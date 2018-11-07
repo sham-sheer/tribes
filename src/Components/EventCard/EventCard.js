@@ -14,15 +14,16 @@ const EventCard = ({ eventData }) => {
   const endDate = eventData.end.local;
 
   console.log(moment(endDate).format('MMMM Do YYYY'));
-  const eventName = eventData.name.text;
+  const eventNameString = eventData.name.text.toString();
+  const eventName = eventNameString.length > 37 ? eventNameString.substring(0, 30) + '...' : eventNameString
   const thumbnailImageSrc = eventData.logo == null ? "#" : eventData.logo.url;
   const eventId = eventData.id;
 
   return (
-    <div className="tribe-event-card-container">
+    <div className="tribe-event-card-container shadow card rounded">
       <div className="thumbnail-image-container">
         <figure className="thumbnail-image">
-          <img src={thumbnailImageSrc} alt=""/>
+          <img src={thumbnailImageSrc} alt="No Event Image"/>
         </figure>
       </div>
       <div className="card-content-container">
@@ -32,7 +33,7 @@ const EventCard = ({ eventData }) => {
         </div>
         <div className="event-content-container">
           <NavLink className="link-to-event-details" to={`/${eventId}`} >
-              <div className="event-name">{eventName}</div>
+              <div className="eventname">{eventName}</div>
           </NavLink>
           <div className="event-date-time">{moment(startDate).format('ddd, MMM DD, hh:mma')}</div>
           <div className="event-location">135 West San Carlos Street, San Jose, CA 95113</div>

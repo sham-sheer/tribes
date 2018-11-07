@@ -4,7 +4,7 @@ import EventCardContainer from './EventCardContainer.js';
 import EventSearchBar from '../Components/EventSearchBar.js';
 import pic from '../assets/download.png';
 
-const DEFAULT_SEARCH_QUERY = 'HACK_BELGIUM';
+const DEFAULT_SEARCH_QUERY = 'music';
 export const EVENT_BRITE_SECURITY_TOKEN = 'GUOC2RZKKGQHHFMHXLON';
 
 export class MainContainer extends React.Component {
